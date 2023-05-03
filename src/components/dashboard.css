@@ -173,18 +173,99 @@
     border: 2px solid transparent;
     width: 700px;
     height: 50px;
-    /* background-color: #1ab394   ; */
+    /* align-items:start; */
+    
+    background-color: #1ab394   ;
     border-radius: 0.5em;
-    margin: -60px 10px 0px 0px;
+    margin: -50px 10px 0px 0px;
     /* margin-bottom: 13%; */
   }
     
-  .courseTr{
-    /* background-color: #f582a7; */
+  .courseTable{
+
+    width: 100%;
+    height: 2%;
+    /* margin-top: 10%; */
+    background-color: #18ee46;
     border: 1px solid black;
+    position: relative;
+    
 
   }
+
+  .tabelindiv{
+    width: 120em;
+    height: 2%;
+    background-color: #f582a7;
+  }
+
+  .courseTr{
+
+    width: 100%;
+    margin-bottom: 1%;
+    /* border-radius: 0.5em; */
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 30%; */
+    border-bottom: 2px solid rgb(28, 29, 28);
   
+    /* padding: 2em; */
+    /* flex-wrap: wrap; */
+
+  }
+
+  .coursetd{
+
+    /* float: right; */
+    width: 10em;
+    height: fit-content;
+
+    padding: 1em 0em 1em 4em;
+    /* border: 1px solid green; */
+    
+
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    /* background-color: rgb(175, 137, 90); */
+    /* width:fit-content; */
+    /* position: absolute; */
+    /* margin-left: 10%; */
+  }
+
+  .coursetdP{
+
+    /* float: right; */
+    width: 10em;
+    height: fit-content;
+    padding: 1em 0em 1em 8em;
+    /* border: 1px solid green; */
+    
+
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    /* background-color: rgb(175, 137, 90); */
+    /* width:fit-content; */
+    /* position: absolute; */
+    /* margin-left: 10%; */
+  }
+
+  
+
+.edicons{
+
+  width: 5em;
+  padding: 0.7em 0em 0em 0em;
+  /* border: 1px solid green; */
+  height: fit-content;
+
+  
+
+  /* margin-left: 10%; */
+  /* margin-right: 10%; */
+  /* background-color: rgb(175, 137, 90); */
+
+  cursor: pointer;
+}
 
 
   @media screen and (min-width: 768px) {

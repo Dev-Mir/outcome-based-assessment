@@ -48,7 +48,7 @@ button{
 }
 
 th {
-    padding: 20px 50px;
+    padding: 10px 50px;
     border-bottom: 2px solid black;
   }
 
@@ -149,24 +149,41 @@ th {
 
 
 
-input {
+.input {
     border: none;
     background-color: rgb(229, 226, 266);
     width: 90%;
     height: 1em;
-    border-radius: 0.25em;
-    text-align:center; 
-    padding: 2em;
+    /* border-radius: 0.25em; */
+    text-align:left; 
+    padding: 1.5em;
+    font-size: large;
+    /* background-color: #163e74; */
 
 }
 
-input:focus {
+.input:focus {
     outline-color: rgb(32, 177, 255);
    
 }
 
 label{
     margin: 1em 0em 0em 0em;
+}
+
+
+.editcourse{
+
+    /* border: none; */
+    /* background-color: rgb(229, 226, 266); */
+    /* width: 90%; */
+    height: 2em;
+    border-radius: 0.25em;
+    text-align:center; 
+    padding: 1em 0em 1em 0em;
+    /* font-size: large; */
+    /* background-color: #163e74; */
+
 }
 
 @media screen and (max-width: 768px) {

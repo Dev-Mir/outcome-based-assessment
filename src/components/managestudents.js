@@ -190,8 +190,9 @@ const Managestudents = () => {
 <div><br/>
 <label htmlFor="stdid">Student's ID</label><br/>
 <input
+className='input'
   type="text"
-  id="stdid"
+  // id="stdid"
   value={stdid}
   onChange={(e) => setStdid(e.target.value)}
 />
@@ -199,6 +200,7 @@ const Managestudents = () => {
 <div>
 <label htmlFor="fullname">Full name</label><br/>
 <input
+className='input'
   type="text"
   id="fullname"
   value={fullname}
@@ -208,6 +210,7 @@ const Managestudents = () => {
 <div>
 <label htmlFor="gender">Gender</label><br/>
 <input
+className='input'
   type="text"
   id="gender"
   value={gender}
@@ -217,6 +220,7 @@ const Managestudents = () => {
 <div>
 <label htmlFor="semester">Current semester</label><br/>
 <input
+className='input'
   type="text"
   id="semester"
   value={semester}

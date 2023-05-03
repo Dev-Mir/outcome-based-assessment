@@ -80,8 +80,9 @@ input {
     height: 4em;
     width: 90%;
     border-radius: 0.25em;
-     text-align: center; 
+    text-align: right; 
     padding: 2em;
+    /* background-color: #333; */
 
 }
 

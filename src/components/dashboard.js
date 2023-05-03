@@ -4,7 +4,9 @@ import logo from "../images/logo.png";
 import CloseIcon from '@mui/icons-material/Close';
 import './dashboard.css';
 import './components_content.css';
-
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SaveIcon from '@mui/icons-material/Save';
 
 
 const Dashboard = () => {
@@ -24,6 +26,9 @@ const Dashboard = () => {
   const [semester, setSemester] = useState('');
   const [arr, setArr] = useState([]);
   // const [saveData, setSaveData] = useState(false);
+
+  const [isEditing, setisEditing] = useState(false);
+  const [isSave, setisSave] = useState(false);
 
   const [noCourseadded, setnoCourseadded] = useState("No course added yet");
   const [saveCourse, setSaveCourse] = useState('');
@@ -61,7 +66,6 @@ const Dashboard = () => {
     setShowForm = false;
 
   };
-
 
 
 
@@ -165,23 +169,82 @@ const Dashboard = () => {
 
           { showForm ? null: 
 
-          
+          // <div className='tabelindiv'>
           
           <table className='courseTable'>
 
             <tbody>
             {arr.map((a, i)=>
             
-            <tr key={i} className='courseTr'> <td>{a.courseCode}</td>
-                        <td>{a.courseName }</td> 
-                         <td>{a.program}</td>
-                         <td>{a.semester}</td>
+            <tr key={i} className='courseTr'> 
+            
+                        <td className='coursetd'>
 
+                        {isEditing ? (
+                      <input className='editcourse' type="text" value={courseCode} 
+                      onChange={(e) => setCourseCode(e.target.value)} />
+                    ) : (
+                      <p>{courseCode}</p>
+                    )}
+
+                        </td>
+
+
+
+                        <td className='coursetd'>
+
+                        {isEditing ? (
+                      <input className='editcourse' type="text" value={courseName} 
+                      onChange={(e) => setCourseName(e.target.value)} />
+                    ) : (
+                      <p>{courseName}</p>
+                    )}
+
+                        </td>
+
+
+                        <td className='coursetd'>
+
+                        {isEditing ? (
+                      <input className='editcourse' type="text" value={program} 
+                      onChange={(e) => setProgram(e.target.value)} />
+                    ) : (
+                      <p>{program}</p>
+                    )}
+
+                        </td>
+
+                        <td className='coursetd'>
+
+                        {isEditing ? (
+                      <input className='editcourse' type="text" value={semester} 
+                      onChange={(e) => setSemester(e.target.value)} />
+                    ) : (
+                      <p>{semester}</p>
+                    )}
+
+                        </td>
+
+
+                        <td className='edicons'>
+
+                        <EditIcon onClick={() => setisEditing(true)}/>  
+                  
+                  { isEditing ? <SaveIcon onClick={() => setisEditing(false)} /> : <DeleteIcon/>} 
+                  
+
+
+
+                        </td>
+
+                        
                          
             </tr>)}
 
           </tbody>
           </table>
+
+          // </div>
           }
 
 
@@ -220,6 +283,7 @@ const Dashboard = () => {
       <div>
         <label htmlFor="courseCode">Course Code</label><br/>
         <input
+        className='input'
           type="text"
           id="courseCode"
           value={courseCode}
@@ -229,6 +293,7 @@ const Dashboard = () => {
       <div>
         <label htmlFor="courseName">Course Name</label>
         <input
+        className='input'
           type="text"
           id="courseName"
           value={courseName}
@@ -238,6 +303,7 @@ const Dashboard = () => {
       <div>
         <label htmlFor="program">Program</label><br/>
         <input
+        className='input'
           type="text"
           id="program"
           value={program}
@@ -247,6 +313,7 @@ const Dashboard = () => {
       <div>
         <label htmlFor="semester">Semester</label><br/>
         <input
+        className='input'
           type="text"
           id="semester"
           value={semester}

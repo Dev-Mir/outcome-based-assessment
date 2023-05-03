@@ -76,7 +76,42 @@ const Courses = () => {
         </nav>
       </aside>
 
-      <h1>Courses</h1>
+      
+      <div className='content'>
+
+<div className='heading'>
+    
+    <p>Courses Information</p>
+
+  {/* <button onClick={() => setShowForm(!showForm)}  > Add new course </button> */}
+
+</div>
+
+<div className='coursedetails'>
+
+<table>
+<thead>
+  <tr>
+    <th>Course Code</th>
+    <th>Course Name</th>
+    <th>Program</th>
+    <th>Semester</th>
+  </tr>
+</thead>
+</table>      
+
+
+</div >
+
+<div className='coursedata' >
+
+   
+ </div>
+
+</div>
+
+
+
     </main>
   );
 };
